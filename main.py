@@ -52,8 +52,11 @@ class LexemeFinder:
         return self.max_lexemes
 
 
-finder = LexemeFinder('институт')
+finder = LexemeFinder('')
 lexemes = finder.lexico_permute_string()
-print("Лексемы с наибольшим числом согласных на нечетных местах:")
-for i, lexeme in enumerate(lexemes, start=1):
-    print(i, "", lexeme)
+if finder.max_consonants == 0:
+    print("Лексем с согласными на нечетных местах не существуют")
+else:
+    print("Лексемы с наибольшим числом согласных на нечетных местах:")
+    for i, lexeme in enumerate(lexemes, start=1):
+        print(i, "", lexeme)
