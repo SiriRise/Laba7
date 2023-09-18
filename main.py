@@ -52,7 +52,7 @@ class LexemeFinder:
         return self.max_lexemes
 
 
-finder = LexemeFinder('')
+finder = LexemeFinder('институт')
 lexemes = finder.lexico_permute_string()
 if finder.max_consonants == 0:
     print("Лексем с согласными на нечетных местах не существуют")
